@@ -1,0 +1,14 @@
+.crown {
+	&-text {
+		@include pos-center;
+
+		text-align: center;
+
+		.age {
+			font-family: "AgencyFB";
+			font-size: 1rem;
+			color: #50564d;
+			margin-top: 0.25rem;
+		}
+	}
+}

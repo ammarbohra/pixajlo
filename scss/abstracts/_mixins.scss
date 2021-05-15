@@ -1,0 +1,41 @@
+$breakpoints: (
+	"sm": 768px,
+	"md": 1024px,
+	"lg": 1280px,
+	"xl": 1536px,
+) !default;
+@mixin mq($breakpoint) {
+	@media (min-width: map-get($breakpoints, $breakpoint)) {
+		@content;
+	}
+}
+@mixin pos($type, $t: null, $r: null, $b: null, $l: null) {
+	position: $type;
+	top: $t;
+	right: $r;
+	bottom: $b;
+	left: $l;
+}
+@mixin pos-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+@mixin flex-center($dir: null) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: center;
+	align-items: center;
+}
+@mixin flex($dir: null, $jc: null, $ai: null) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: $jc;
+	align-items: $ai;
+}
+
+@mixin size($height, $width: $height) {
+	height: $height;
+	width: $width;
+}

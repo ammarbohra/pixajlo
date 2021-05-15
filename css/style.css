@@ -1,0 +1,341 @@
+:root {
+  --fs-1: 2rem;
+  --fs-2: 1.5rem;
+  --fs-3: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --fs-1: 2.5rem;
+    --fs-2: 2rem;
+    --fs-3: 1.5rem;
+  }
+}
+
+@font-face {
+  font-family: "Impact";
+  src: url(../../img/fonts/impact.ttf);
+}
+@font-face {
+  font-family: "AgencyFB";
+  src: url(../../img/fonts/AgencyFB.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #08122b 0%, #1e3b29 100%);
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+  font-family: "Impact";
+}
+
+h1 {
+  font-size: var(--fs-1);
+}
+
+h2 {
+  font-size: var(--fs-2);
+}
+
+h3 {
+  font-size: var(--fs-3);
+}
+
+button {
+  font-size: var(--fs-3);
+  font-family: "AgencyFB";
+  height: 2.5rem;
+  padding: 0.25rem 2rem;
+  color: #fff;
+  background: transparent;
+  border-radius: 2.5rem;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button img {
+  height: 100%;
+  margin-right: 0.5rem;
+}
+
+.text-yellow {
+  color: #ece218;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .wrapper {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+  .wrapper {
+    max-width: 1536px;
+  }
+}
+
+.grid {
+  height: 840px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(3, 1fr) 0.5fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+@media (min-width: 768px) {
+  .grid {
+    margin-left: 256px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .identity {
+    grid-row: 1/span 1;
+    grid-column: 1/span 5;
+  }
+
+  .logo {
+    grid-row: 1/span 1;
+    grid-column: 6/span 2;
+  }
+
+  .support-artist {
+    grid-row: 1/span 1;
+    grid-column: 8/span 5;
+  }
+
+  .prices-clients {
+    grid-row: 2/span 2;
+    grid-column: 1/span 3;
+    background: transparent !important;
+  }
+  .prices-clients > div {
+    background: pink;
+  }
+
+  .prices {
+    height: calc(40% - 20px);
+    margin-bottom: 20px;
+  }
+
+  .clients {
+    height: 60%;
+  }
+
+  .team {
+    grid-row: 2/span 2;
+    grid-column: 4/span 3;
+  }
+
+  .digital-art {
+    grid-row: 2/span 1;
+    grid-column: 7/span 3;
+  }
+
+  .pixel-art {
+    grid-row: 3/span 1;
+    grid-column: 7/span 3;
+  }
+
+  .minecraft {
+    grid-row: 2/span 1;
+    grid-column: 10/span 3;
+  }
+
+  .reviews {
+    grid-row: 3/span 2;
+    grid-column: 10/span 3;
+  }
+
+  .contact {
+    grid-row: 4/span 1;
+    grid-column: 1/span 4;
+  }
+
+  .social {
+    grid-row: 4/span 1;
+    grid-column: 5/span 5;
+  }
+}
+.sidebar {
+  position: static;
+  display: flex;
+  height: 96px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.sidebar .crown {
+  position: relative;
+}
+.sidebar .crown .icon {
+  position: absolute;
+  top: 75%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  width: 15%;
+}
+.sidebar .design-level {
+  flex-grow: 1;
+  border: 1px solid #7e69a7;
+  border-left: 0;
+  overflow: hidden;
+}
+.sidebar .portrait {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+.sidebar .landscape {
+  height: 100%;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    flex-direction: column;
+    height: calc(100vh - 2 * 20px);
+    width: 256px;
+    padding-right: 40px;
+  }
+  .sidebar .crown .icon {
+    top: 0;
+    left: 25%;
+  }
+  .sidebar .design-level {
+    border: 2px solid #7e69a7;
+    border-top: 0;
+  }
+  .sidebar .portrait {
+    display: inline;
+  }
+  .sidebar .landscape {
+    display: none;
+  }
+}
+.crown-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.crown-text .age {
+  font-family: "AgencyFB";
+  font-size: 1rem;
+  color: #50564d;
+  margin-top: 0.25rem;
+}
+
+.design-level {
+  position: relative;
+}
+.design-level-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .design-level-text {
+    flex-direction: column;
+  }
+}
+.design-level-text img {
+  width: 1.75rem;
+}
+.design-level-text h3 {
+  margin: 0 0.75rem;
+}
+@media (min-width: 768px) {
+  .design-level-text h3 {
+    margin: 2rem 0;
+  }
+}
+.design-level-text .rating {
+  display: flex;
+}
+@media (min-width: 768px) {
+  .design-level-text .rating i {
+    margin: 0 0.5rem;
+  }
+}
+
+.identity {
+  background: linear-gradient(135deg, #377138 0%, transparent 50%);
+  display: flex;
+  align-items: center;
+}
+.identity .level {
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 0 40px 0 60px;
+  font-family: "AgencyFB";
+}
+.identity .level h3 {
+  font-family: "AgencyFB";
+}
+.identity .designer-statistics {
+  font-family: "AgencyFB";
+  margin-top: 1.5rem;
+}
+.identity .designer-statistics img {
+  width: 1.375rem;
+  margin-right: 0.5rem;
+  vertical-align: text-bottom;
+}
+
+.support-artist {
+  border-radius: 8px;
+  border: 2px solid #485b5d;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  position: relative;
+}
+.support-artist .cash {
+  position: absolute;
+  top: -1.25rem;
+  right: -1.25rem;
+  height: 120px;
+  filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.5));
+}
+
+/*# sourceMappingURL=style.css.map */

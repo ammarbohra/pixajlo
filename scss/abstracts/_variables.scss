@@ -1,0 +1,15 @@
+$yellow: #ece218;
+$purple: #7e69a7;
+
+:root {
+	--fs-1: 2rem;
+	--fs-2: 1.5rem;
+	--fs-3: 1.25rem;
+}
+:root {
+	@include mq("sm") {
+		--fs-1: 2.5rem;
+		--fs-2: 2rem;
+		--fs-3: 1.5rem;
+	}
+}

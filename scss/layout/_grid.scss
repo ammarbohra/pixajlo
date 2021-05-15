@@ -1,0 +1,70 @@
+.grid {
+	@include mq("sm") {
+		margin-left: 256px;
+	}
+	height: 840px;
+
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(3, 1fr) 0.5fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+@include mq("xl") {
+	.identity {
+		grid-row: 1 / span 1;
+		grid-column: 1 / span 5;
+	}
+	.logo {
+		grid-row: 1 / span 1;
+		grid-column: 6 / span 2;
+	}
+	.support-artist {
+		grid-row: 1 / span 1;
+		grid-column: 8 / span 5;
+	}
+	.prices-clients {
+		grid-row: 2 / span 2;
+		grid-column: 1 / span 3;
+		background: transparent !important;
+
+		& > div {
+			background: pink;
+		}
+	}
+	.prices {
+		height: calc(40% - 20px);
+		margin-bottom: 20px;
+	}
+	.clients {
+		height: 60%;
+	}
+	.team {
+		grid-row: 2 / span 2;
+		grid-column: 4 / span 3;
+	}
+	.digital-art {
+		grid-row: 2 / span 1;
+		grid-column: 7 / span 3;
+	}
+	.pixel-art {
+		grid-row: 3 / span 1;
+		grid-column: 7 / span 3;
+	}
+	.minecraft {
+		grid-row: 2 / span 1;
+		grid-column: 10 / span 3;
+	}
+	.reviews {
+		grid-row: 3 / span 2;
+		grid-column: 10 / span 3;
+	}
+	.contact {
+		grid-row: 4 / span 1;
+		grid-column: 1 / span 4;
+	}
+	.social {
+		grid-row: 4 / span 1;
+		grid-column: 5 / span 5;
+	}
+}

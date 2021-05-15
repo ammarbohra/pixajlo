@@ -1,0 +1,55 @@
+.sidebar {
+	position: static;
+	display: flex;
+	height: 96px;
+	width: 100%;
+	margin-bottom: 20px;
+	.crown {
+		position: relative;
+		.icon {
+			position: absolute;
+			top: 75%;
+			left: 0;
+			transform: translate(-50%, -50%);
+			width: 15%;
+		}
+	}
+	.design-level {
+		flex-grow: 1;
+		border: 1px solid $purple;
+		border-left: 0;
+		overflow: hidden;
+	}
+	.portrait {
+		display: none;
+		width: 100%;
+		height: auto;
+	}
+	.landscape {
+		height: 100%;
+		width: auto;
+	}
+}
+@include mq("sm") {
+	.sidebar {
+		position: fixed;
+		flex-direction: column;
+		height: calc(100vh - 2 * 20px);
+		width: 256px;
+		padding-right: 40px;
+		.crown .icon {
+			top: 0;
+			left: 25%;
+		}
+		.design-level {
+			border: 2px solid $purple;
+			border-top: 0;
+		}
+		.portrait {
+			display: inline;
+		}
+		.landscape {
+			display: none;
+		}
+	}
+}
