@@ -1,0 +1,18 @@
+.minecraft-models {
+	--cl: #ba9d5e;
+	background: linear-gradient(135deg, #89783e 0%, transparent 75%);
+	@include flex(column, $jc: space-between, $ai: flex-start);
+	.img {
+		top: -0.5rem;
+		right: -0.5rem;
+		height: 70%;
+	}
+	cursor: pointer;
+	&-modal {
+		--cl: #ba9d5e;
+		background: linear-gradient(#89783e 0%, transparent 75%);
+		.img {
+			width: 150px;
+		}
+	}
+}

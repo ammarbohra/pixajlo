@@ -1,0 +1,20 @@
+.pixel-art {
+	--cl: #bd6a7d;
+	background: linear-gradient(135deg, #7f5060 0%, transparent 90%);
+	@include flex($jc: space-between, $ai: flex-start);
+	.img {
+		bottom: -0.5rem;
+		left: 3rem;
+		height: 85%;
+	}
+	cursor: pointer;
+	&-modal {
+		--cl: #bd6a7d;
+		background: linear-gradient(#7f5060 0%, transparent 75%);
+		.img {
+			top: -50px;
+			right: -30px;
+			width: 150px;
+		}
+	}
+}

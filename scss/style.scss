@@ -1,12 +1,26 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
+
 @import "base/reset";
+@import "base/typography";
 @import "base/utilities";
+
 @import "layout/wrapper";
 @import "layout/grid";
 @import "layout/sidebar";
+
 @import "components/buttons";
+@import "components/cards";
+@import "components/modals";
+
 @import "components/crown";
 @import "components/design-level";
+
 @import "components/identity";
 @import "components/support-artist";
+@import "components/prices";
+@import "components/my-team";
+@import "components/digital-art";
+@import "components/pixel-art";
+@import "components/minecraft-models";
+@import "components/close-btn";

@@ -1,0 +1,19 @@
+.prices {
+	--cl: #485b5d;
+	background: linear-gradient(90deg, #144e53 0%, transparent 75%);
+	@include flex($ai: center);
+	.icon {
+		margin-right: 1rem;
+	}
+	.img {
+		bottom: 1rem;
+		right: -1rem;
+		height: 80%;
+	}
+	cursor: pointer;
+
+	&-modal {
+		--cl: #5a9e94;
+		background: linear-gradient(#3f706b 0%, transparent 75%);
+	}
+}

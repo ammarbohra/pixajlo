@@ -1,0 +1,15 @@
+.digital-art {
+	--cl: #85c192;
+	background: linear-gradient(135deg, #49835d 0%, transparent 75%);
+	@include flex(column, $jc: space-between, $ai: flex-start);
+	.img {
+		top: -0.5rem;
+		right: -0.5rem;
+		height: 60%;
+	}
+	cursor: pointer;
+	&-modal {
+		--cl: #85c192;
+		background: linear-gradient(#3f7050 0%, transparent 75%);
+	}
+}

@@ -1,0 +1,11 @@
+.close-btn {
+	--cl: #bc6a7c;
+	background: linear-gradient(#694f51 0%, transparent 100%);
+	h2 {
+		text-align: center;
+		color: var(--cl);
+	}
+	cursor: pointer;
+	visibility: hidden;
+	opacity: 0;
+}

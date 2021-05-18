@@ -2,18 +2,12 @@
 	position: relative;
 	&-text {
 		@include pos-center;
-
 		text-align: center;
-
 		display: flex;
 		@include mq("sm") {
 			flex-direction: column;
 		}
 		align-items: center;
-
-		img {
-			width: 1.75rem;
-		}
 		h3 {
 			margin: 0 0.75rem;
 			@include mq("sm") {

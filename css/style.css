@@ -2,6 +2,9 @@
   --fs-1: 2rem;
   --fs-2: 1.5rem;
   --fs-3: 1.25rem;
+  --spacer-sm: 20px;
+  --spacer-md: 30px;
+  --spacer-lg: 40px;
 }
 
 @media (min-width: 768px) {
@@ -9,16 +12,19 @@
     --fs-1: 2.5rem;
     --fs-2: 2rem;
     --fs-3: 1.5rem;
+    --spacer-sm: 20px;
+    --spacer-md: 30px;
+    --spacer-lg: 40px;
   }
 }
 
 @font-face {
   font-family: "Impact";
-  src: url(../../img/fonts/impact.ttf);
+  src: url(../img/fonts/impact.ttf);
 }
 @font-face {
   font-family: "AgencyFB";
-  src: url(../../img/fonts/AgencyFB.ttf);
+  src: url(../img/fonts/AgencyFB.ttf);
 }
 * {
   padding: 0;
@@ -29,6 +35,7 @@
 body {
   background: linear-gradient(135deg, #08122b 0%, #1e3b29 100%);
   color: #fff;
+  min-height: 100vh;
 }
 
 h1,
@@ -50,31 +57,13 @@ h3 {
   font-size: var(--fs-3);
 }
 
-button {
-  font-size: var(--fs-3);
-  font-family: "AgencyFB";
-  height: 2.5rem;
-  padding: 0.25rem 2rem;
-  color: #fff;
-  background: transparent;
-  border-radius: 2.5rem;
-  border: 1px solid #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-button img {
-  height: 100%;
-  margin-right: 0.5rem;
-}
-
 .text-yellow {
   color: #ece218;
 }
 
 .wrapper {
   width: 100%;
-  padding: 20px;
+  padding: var(--spacer-sm);
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,12 +89,14 @@ button img {
 }
 
 .grid {
-  height: 840px;
+  height: calc(100vh - 2 * var(--spacer-sm));
+  min-height: 750px;
+  max-height: 1000px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr) 0.5fr;
-  grid-column-gap: 20px;
-  grid-row-gap: 20px;
+  grid-template-rows: repeat(3, 1fr) 0.4fr;
+  grid-column-gap: var(--spacer-sm);
+  grid-row-gap: var(--spacer-sm);
 }
 @media (min-width: 768px) {
   .grid {
@@ -132,22 +123,18 @@ button img {
   .prices-clients {
     grid-row: 2/span 2;
     grid-column: 1/span 3;
-    background: transparent !important;
-  }
-  .prices-clients > div {
-    background: pink;
   }
 
   .prices {
-    height: calc(40% - 20px);
-    margin-bottom: 20px;
+    height: calc(35% - var(--spacer-sm));
+    margin-bottom: var(--spacer-sm);
   }
 
   .clients {
-    height: 60%;
+    height: 65%;
   }
 
-  .team {
+  .my-team {
     grid-row: 2/span 2;
     grid-column: 4/span 3;
   }
@@ -162,7 +149,7 @@ button img {
     grid-column: 7/span 3;
   }
 
-  .minecraft {
+  .minecraft-models {
     grid-row: 2/span 1;
     grid-column: 10/span 3;
   }
@@ -181,13 +168,37 @@ button img {
     grid-row: 4/span 1;
     grid-column: 5/span 5;
   }
+
+  .close-btn {
+    grid-row: 4/span 1;
+    grid-column: 10/span 3;
+    background: #000;
+  }
+
+  .prices-modal,
+.digital-art-modal,
+.pixel-art-modal,
+.minecraft-models-modal {
+    grid-row: 1/span 3;
+    grid-column: 1/span 12;
+  }
+
+  .my-team-modal {
+    grid-row: 1/span 3;
+    grid-column: 1/span 9;
+  }
+
+  .apply-modal {
+    grid-row: 1/span 3;
+    grid-column: 10/span 3;
+  }
 }
 .sidebar {
   position: static;
   display: flex;
   height: 96px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacer-sm);
 }
 .sidebar .crown {
   position: relative;
@@ -201,7 +212,7 @@ button img {
 }
 .sidebar .design-level {
   flex-grow: 1;
-  border: 1px solid #7e69a7;
+  border: 2px solid #7e69a7;
   border-left: 0;
   overflow: hidden;
 }
@@ -219,9 +230,10 @@ button img {
   .sidebar {
     position: fixed;
     flex-direction: column;
-    height: calc(100vh - 2 * 20px);
+    height: calc(100vh - 2 * var(--spacer-sm));
+    max-height: 1000px;
     width: 256px;
-    padding-right: 40px;
+    padding-right: var(--spacer-lg);
   }
   .sidebar .crown .icon {
     top: 0;
@@ -238,6 +250,63 @@ button img {
     display: none;
   }
 }
+button {
+  font-size: var(--fs-3);
+  font-family: "AgencyFB";
+  height: 2.5rem;
+  padding: 0.25rem 2rem;
+  color: #fff;
+  background: transparent;
+  border-radius: 2.5rem;
+  border: 1px solid #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button img {
+  max-height: 100%;
+  margin-right: 1rem;
+}
+
+.card {
+  border-radius: 8px;
+  border: 2px solid var(--cl);
+  padding: var(--spacer-md);
+  position: relative;
+}
+.card.-sm {
+  padding: var(--spacer-sm);
+}
+.card.-lg {
+  padding: var(--spacer-lg);
+}
+.card > .img {
+  position: absolute;
+  filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.5));
+}
+
+.modal {
+  border-radius: 8px;
+  border: 2px solid var(--cl);
+  padding: 0 var(--spacer-sm);
+  overflow: visible;
+  position: relative;
+  visibility: hidden;
+  opacity: 0;
+}
+.modal h2 {
+  text-align: center;
+  padding: calc(var(--spacer-sm) / 2) 0;
+  border-bottom: 2px solid var(--cl);
+}
+.modal .img {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  width: 200px;
+}
+
 .crown-text {
   position: absolute;
   top: 50%;
@@ -268,9 +337,6 @@ button img {
   .design-level-text {
     flex-direction: column;
   }
-}
-.design-level-text img {
-  width: 1.75rem;
 }
 .design-level-text h3 {
   margin: 0 0.75rem;
@@ -304,7 +370,7 @@ button img {
   align-items: center;
   border-radius: 50%;
   border: 1px solid #fff;
-  margin: 0 40px 0 60px;
+  margin: 0 var(--spacer-lg);
   font-family: "AgencyFB";
 }
 .identity .level h3 {
@@ -321,21 +387,133 @@ button img {
 }
 
 .support-artist {
-  border-radius: 8px;
-  border: 2px solid #485b5d;
+  --cl: #485b5d;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 40px;
-  position: relative;
 }
-.support-artist .cash {
-  position: absolute;
+.support-artist .img {
   top: -1.25rem;
   right: -1.25rem;
   height: 120px;
-  filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.5));
+}
+
+.prices {
+  --cl: #485b5d;
+  background: linear-gradient(90deg, #144e53 0%, transparent 75%);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.prices .icon {
+  margin-right: 1rem;
+}
+.prices .img {
+  bottom: 1rem;
+  right: -1rem;
+  height: 80%;
+}
+.prices-modal {
+  --cl: #5a9e94;
+  background: linear-gradient(#3f706b 0%, transparent 75%);
+}
+
+.my-team {
+  --cl: #7cb0d0;
+  background: linear-gradient(135deg, #486b7f 0%, #192c3c 75%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.my-team .icon {
+  margin: var(--spacer-sm) 0 var(--spacer-lg) 0;
+}
+.my-team button {
+  margin: auto 0 var(--spacer-sm) 0;
+}
+
+.my-team-modal,
+.apply-modal {
+  --cl: #7cb0d0;
+  background: linear-gradient(#486b7f 0%, transparent 75%);
+}
+
+.digital-art {
+  --cl: #85c192;
+  background: linear-gradient(135deg, #49835d 0%, transparent 75%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.digital-art .img {
+  top: -0.5rem;
+  right: -0.5rem;
+  height: 60%;
+}
+.digital-art-modal {
+  --cl: #85c192;
+  background: linear-gradient(#3f7050 0%, transparent 75%);
+}
+
+.pixel-art {
+  --cl: #bd6a7d;
+  background: linear-gradient(135deg, #7f5060 0%, transparent 90%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.pixel-art .img {
+  bottom: -0.5rem;
+  left: 3rem;
+  height: 85%;
+}
+.pixel-art-modal {
+  --cl: #bd6a7d;
+  background: linear-gradient(#7f5060 0%, transparent 75%);
+}
+.pixel-art-modal .img {
+  top: -50px;
+  right: -30px;
+  width: 150px;
+}
+
+.minecraft-models {
+  --cl: #ba9d5e;
+  background: linear-gradient(135deg, #89783e 0%, transparent 75%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.minecraft-models .img {
+  top: -0.5rem;
+  right: -0.5rem;
+  height: 70%;
+}
+.minecraft-models-modal {
+  --cl: #ba9d5e;
+  background: linear-gradient(#89783e 0%, transparent 75%);
+}
+.minecraft-models-modal .img {
+  width: 150px;
+}
+
+.close-btn {
+  --cl: #bc6a7c;
+  background: linear-gradient(#694f51 0%, transparent 100%);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+}
+.close-btn h2 {
+  text-align: center;
+  color: var(--cl);
 }
 
 /*# sourceMappingURL=style.css.map */

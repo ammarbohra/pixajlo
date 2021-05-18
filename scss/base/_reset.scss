@@ -1,10 +1,10 @@
 @font-face {
 	font-family: "Impact";
-	src: url(../../img/fonts/impact.ttf);
+	src: url(../img/fonts/impact.ttf);
 }
 @font-face {
 	font-family: "AgencyFB";
-	src: url(../../img/fonts/AgencyFB.ttf);
+	src: url(../img/fonts/AgencyFB.ttf);
 }
 * {
 	padding: 0;
@@ -14,35 +14,5 @@
 body {
 	background: linear-gradient(135deg, #08122b 0%, #1e3b29 100%);
 	color: #fff;
-}
-h1,
-h2,
-h3 {
-	font-weight: normal;
-	font-family: "Impact";
-}
-h1 {
-	font-size: var(--fs-1);
-}
-h2 {
-	font-size: var(--fs-2);
-}
-h3 {
-	font-size: var(--fs-3);
-}
-button {
-	font-size: var(--fs-3);
-	font-family: "AgencyFB";
-	height: 2.5rem;
-	padding: 0.25rem 2rem;
-	color: #fff;
-	background: transparent;
-	border-radius: 2.5rem;
-	border: 1px solid #fff;
-	@include flex-center;
-
-	img {
-		height: 100%;
-		margin-right: 0.5rem;
-	}
+	min-height: 100vh;
 }

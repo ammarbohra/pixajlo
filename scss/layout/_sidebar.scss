@@ -3,7 +3,7 @@
 	display: flex;
 	height: 96px;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: var(--spacer-sm);
 	.crown {
 		position: relative;
 		.icon {
@@ -16,7 +16,7 @@
 	}
 	.design-level {
 		flex-grow: 1;
-		border: 1px solid $purple;
+		border: 2px solid $purple;
 		border-left: 0;
 		overflow: hidden;
 	}
@@ -34,9 +34,10 @@
 	.sidebar {
 		position: fixed;
 		flex-direction: column;
-		height: calc(100vh - 2 * 20px);
+		height: calc(100vh - 2 * var(--spacer-sm));
+		max-height: 1000px;
 		width: 256px;
-		padding-right: 40px;
+		padding-right: var(--spacer-lg);
 		.crown .icon {
 			top: 0;
 			left: 25%;

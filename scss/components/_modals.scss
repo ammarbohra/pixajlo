@@ -1,0 +1,20 @@
+.modal {
+	border-radius: 8px;
+	border: 2px solid var(--cl);
+	padding: 0 var(--spacer-sm);
+	overflow: visible;
+	h2 {
+		text-align: center;
+		padding: calc(var(--spacer-sm) / 2) 0;
+		border-bottom: 2px solid var(--cl);
+	}
+	position: relative;
+	.img {
+		position: absolute;
+		top: -30px;
+		right: -40px;
+		width: 200px;
+	}
+	visibility: hidden;
+	opacity: 0;
+}

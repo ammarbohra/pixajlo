@@ -1,0 +1,17 @@
+.my-team {
+	--cl: #7cb0d0;
+	background: linear-gradient(135deg, #486b7f 0%, #192c3c 75%);
+	@include flex(column, $ai: center);
+	text-align: center;
+	.icon {
+		margin: var(--spacer-sm) 0 var(--spacer-lg) 0;
+	}
+	button {
+		margin: auto 0 var(--spacer-sm) 0;
+	}
+}
+.my-team-modal,
+.apply-modal {
+	--cl: #7cb0d0;
+	background: linear-gradient(#486b7f 0%, transparent 75%);
+}

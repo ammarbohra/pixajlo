@@ -1,15 +1,22 @@
 $yellow: #ece218;
 $purple: #7e69a7;
+$cyan: #5dcab7;
 
 :root {
 	--fs-1: 2rem;
 	--fs-2: 1.5rem;
 	--fs-3: 1.25rem;
+	--spacer-sm: 20px;
+	--spacer-md: 30px;
+	--spacer-lg: 40px;
 }
 :root {
 	@include mq("sm") {
 		--fs-1: 2.5rem;
 		--fs-2: 2rem;
 		--fs-3: 1.5rem;
+		--spacer-sm: 20px;
+		--spacer-md: 30px;
+		--spacer-lg: 40px;
 	}
 }
