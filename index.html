@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> -->
   <link rel="stylesheet" href="css/style.css">
   <title>Pixajlo</title>
 </head>
@@ -28,9 +28,9 @@
           <img src="img/icons/design-level.svg" alt="">
           <h3>DESIGN <br> LEVEL</h3>
           <div class="rating">
-            <i class="fas fa-star text-yellow"></i>
-            <i class="fas fa-star text-yellow"></i>
-            <i class="fas fa-star"></i>
+            <img src="img/icons/star-yellow.svg" alt="">
+            <img src="img/icons/star-yellow.svg" alt="">
+            <img src="img/icons/star-white.svg" alt="">
           </div>
         </div>
       </div>
@@ -58,13 +58,27 @@
           <h3>PRICES</h3>
           <img src="img/graphics/gold-bars.png" alt="" class="img">
         </div>
-        <div class="clients">clients</div>
+        <div class="clients card">
+          <img src="img/graphics/leather-bag.png" alt="" class="img">
+          <div class="no-of-clients">
+            <img src="img/icons/clients.svg" alt="">
+            <h3>CLIENTS</h3>
+            <h3 class="no">216</h3>
+          </div>
+          <div class="success">
+            <h3>JOB SUCCESS</h3>
+            <div class="percent">
+              <h3>100%</h3>
+            </div>
+          </div>
+          <button style="padding: 0.25rem;"><img src="img/icons/commission.svg" alt=""> COMMISSION <span class="text-green" style="margin-left: 0.25rem;">OPEN</span></button>
+        </div>
       </div>
 
       <div class="my-team card">
         <img src="img/icons/my-team.svg" alt="" class="icon">
         <h3>MY<br>TEAM</h3>
-        <button modal=".my-team-modal .apply-modal"><img src="img/icons/list.png" alt="">APPLY</button>
+        <button modal=".my-team-modal .apply-modal"><img src="img/icons/clipboard.svg" alt="">APPLY</button>
       </div>
 
       <div class="digital-art card" modal=".digital-art-modal">
@@ -85,11 +99,34 @@
         <h3>MINECRAFT<br>MODELS</h3>
       </div>
 
-      <div class="reviews">reviews</div>
-      <div class="contact">contact</div>
-      <div class="social">social</div>
+      <div class="reviews card">
+        <img src="img/icons/reviews.svg" alt="">
+        <h3>REVIEWS</h3>
+        <img src="img/icons/chevron-down.svg" alt="">
+      </div>
 
-      <div class="close-btn card -sm">
+      <div class="reviews-card card">
+        <img src="img/icons/close.svg" alt="" class="reviews-close">
+      </div>
+
+      <div class="contact-me">
+        <img src="img/icons/contact-me.svg" alt="">
+        <h4>CONTACT ME</h4>
+        <img src="img/icons/chevron-right.svg" alt="">
+      </div>
+
+      <div class="social-media">
+        <img src="img/icons/social-media.svg" alt="">
+        <h4>SOCIAL MEDIA</h4>
+        <button>
+          <img src="img/icons/search.svg" alt="">
+          <div>
+            CHECKOUT<br><span class="text-red">NOW</span>
+          </div>
+        </button>
+      </div>
+
+      <div class="close-btn card -no-p flex-center">
         <h2>CLOSE</h2>
       </div>
       

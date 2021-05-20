@@ -1,0 +1,9 @@
+.contact-me {
+	border-radius: 16px;
+	background: rgba(255, 255, 255, 0.1);
+	padding: 0 var(--spacer-md);
+	@include flex($ai: center);
+	h4 {
+		margin: 0 auto 0 var(--spacer-sm);
+	}
+}

@@ -34,7 +34,7 @@
 	.sidebar {
 		position: fixed;
 		flex-direction: column;
-		height: calc(100vh - 2 * var(--spacer-sm));
+		height: calc(100vh - 2 * var(--spacer-md));
 		max-height: 1000px;
 		width: 256px;
 		padding-right: var(--spacer-lg);

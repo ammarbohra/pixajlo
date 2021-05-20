@@ -16,7 +16,7 @@
 		}
 		.rating {
 			display: flex;
-			i {
+			img {
 				@include mq("sm") {
 					margin: 0 0.5rem;
 				}

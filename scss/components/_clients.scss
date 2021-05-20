@@ -1,0 +1,44 @@
+.clients {
+	--cl: #c4b283;
+	background: linear-gradient(135deg, #6f6644 0%, transparent 50%);
+	@media (min-width: 1536px) and (max-height: 732px) {
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	.img {
+		width: 55%;
+		top: 46%;
+		transform: translateY(-50%);
+		left: -1.5rem;
+	}
+	.no-of-clients {
+		display: flex;
+		img {
+			margin-right: 1rem;
+		}
+		.no {
+			margin-left: auto;
+		}
+	}
+	.success {
+		align-self: flex-end;
+		text-align: center;
+		margin-right: -0.75rem;
+	}
+	.percent {
+		text-align: center;
+		@include size(90px);
+		@include flex-center(column);
+		border-radius: 50%;
+		border: 1px solid #fff;
+		margin: 0.5rem auto 0 auto;
+
+		font-family: "AgencyFB";
+		h3 {
+			font-family: "AgencyFB";
+		}
+	}
+}

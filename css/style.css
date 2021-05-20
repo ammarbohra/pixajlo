@@ -40,9 +40,12 @@ body {
 
 h1,
 h2,
-h3 {
-  font-weight: normal;
+h3,
+h4 {
+  font-weight: 400;
   font-family: "Impact";
+  letter-spacing: 0.5px;
+  opacity: 0.9;
 }
 
 h1 {
@@ -57,15 +60,34 @@ h3 {
   font-size: var(--fs-3);
 }
 
+h4 {
+  font-size: 1.125rem;
+}
+
 .text-yellow {
   color: #ece218;
 }
 
+.text-green {
+  color: #70d685;
+}
+
+.text-red {
+  color: #bc6a7d;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper {
   width: 100%;
-  padding: var(--spacer-sm);
+  padding: var(--spacer-md) var(--spacer-sm);
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
 }
 @media (min-width: 768px) {
   .wrapper {
@@ -89,8 +111,8 @@ h3 {
 }
 
 .grid {
-  height: calc(100vh - 2 * var(--spacer-sm));
-  min-height: 750px;
+  height: calc(100vh - 2 * var(--spacer-md));
+  min-height: 600px;
   max-height: 1000px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -126,12 +148,12 @@ h3 {
   }
 
   .prices {
-    height: calc(35% - var(--spacer-sm));
+    height: calc(30% - var(--spacer-sm));
     margin-bottom: var(--spacer-sm);
   }
 
   .clients {
-    height: 65%;
+    height: 70%;
   }
 
   .my-team {
@@ -159,12 +181,12 @@ h3 {
     grid-column: 10/span 3;
   }
 
-  .contact {
+  .contact-me {
     grid-row: 4/span 1;
     grid-column: 1/span 4;
   }
 
-  .social {
+  .social-media {
     grid-row: 4/span 1;
     grid-column: 5/span 5;
   }
@@ -190,6 +212,11 @@ h3 {
 
   .apply-modal {
     grid-row: 1/span 3;
+    grid-column: 10/span 3;
+  }
+
+  .reviews-card {
+    grid-row: 2/span 3;
     grid-column: 10/span 3;
   }
 }
@@ -230,7 +257,7 @@ h3 {
   .sidebar {
     position: fixed;
     flex-direction: column;
-    height: calc(100vh - 2 * var(--spacer-sm));
+    height: calc(100vh - 2 * var(--spacer-md));
     max-height: 1000px;
     width: 256px;
     padding-right: var(--spacer-lg);
@@ -275,6 +302,9 @@ button img {
   padding: var(--spacer-md);
   position: relative;
 }
+.card.-no-p {
+  padding: 0;
+}
 .card.-sm {
   padding: var(--spacer-sm);
 }
@@ -290,7 +320,6 @@ button img {
   border-radius: 8px;
   border: 2px solid var(--cl);
   padding: 0 var(--spacer-sm);
-  overflow: visible;
   position: relative;
   visibility: hidden;
   opacity: 0;
@@ -304,7 +333,9 @@ button img {
   position: absolute;
   top: -30px;
   right: -40px;
-  width: 200px;
+  width: 180px;
+  z-index: 9;
+  filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.5));
 }
 
 .crown-text {
@@ -317,7 +348,7 @@ button img {
 .crown-text .age {
   font-family: "AgencyFB";
   font-size: 1rem;
-  color: #50564d;
+  color: #8d928a;
   margin-top: 0.25rem;
 }
 
@@ -350,7 +381,7 @@ button img {
   display: flex;
 }
 @media (min-width: 768px) {
-  .design-level-text .rating i {
+  .design-level-text .rating img {
     margin: 0 0.5rem;
   }
 }
@@ -400,7 +431,7 @@ button img {
 }
 
 .prices {
-  --cl: #485b5d;
+  --cl: #5a9e94;
   background: linear-gradient(90deg, #144e53 0%, transparent 75%);
   display: flex;
   align-items: center;
@@ -410,13 +441,63 @@ button img {
   margin-right: 1rem;
 }
 .prices .img {
-  bottom: 1rem;
+  bottom: -0.25rem;
   right: -1rem;
   height: 80%;
 }
 .prices-modal {
   --cl: #5a9e94;
   background: linear-gradient(#3f706b 0%, transparent 75%);
+}
+
+.clients {
+  --cl: #c4b283;
+  background: linear-gradient(135deg, #6f6644 0%, transparent 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media (min-width: 1536px) and (max-height: 732px) {
+  .clients {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+.clients .img {
+  width: 55%;
+  top: 46%;
+  transform: translateY(-50%);
+  left: -1.5rem;
+}
+.clients .no-of-clients {
+  display: flex;
+}
+.clients .no-of-clients img {
+  margin-right: 1rem;
+}
+.clients .no-of-clients .no {
+  margin-left: auto;
+}
+.clients .success {
+  align-self: flex-end;
+  text-align: center;
+  margin-right: -0.75rem;
+}
+.clients .percent {
+  text-align: center;
+  height: 90px;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  margin: 0.5rem auto 0 auto;
+  font-family: "AgencyFB";
+}
+.clients .percent h3 {
+  font-family: "AgencyFB";
 }
 
 .my-team {
@@ -477,9 +558,10 @@ button img {
   background: linear-gradient(#7f5060 0%, transparent 75%);
 }
 .pixel-art-modal .img {
-  top: -50px;
+  top: -70px;
   right: -30px;
   width: 150px;
+  transform: rotate(15deg);
 }
 
 .minecraft-models {
@@ -501,7 +583,66 @@ button img {
   background: linear-gradient(#89783e 0%, transparent 75%);
 }
 .minecraft-models-modal .img {
-  width: 150px;
+  width: 120px;
+}
+
+.reviews {
+  --cl: #bccfc8;
+  background: linear-gradient(135deg, #556b64 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.reviews h3 {
+  margin: var(--spacer-md) 0;
+}
+.reviews-card {
+  --cl: #bccfc8;
+  background: linear-gradient(-45deg, #556b64 0%, transparent 50%);
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.reviews-close {
+  margin-top: auto;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.contact-me {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0 var(--spacer-md);
+  display: flex;
+  align-items: center;
+}
+.contact-me h4 {
+  margin: 0 auto 0 var(--spacer-sm);
+}
+
+.social-media {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0 0 0 var(--spacer-md);
+  display: flex;
+  align-items: center;
+}
+.social-media h4 {
+  margin: 0 auto 0 var(--spacer-sm);
+}
+.social-media button {
+  border: none;
+  border-radius: 16px;
+  background: #65585b;
+  height: 100%;
+  padding: 0 var(--spacer-md);
+  display: flex;
+  font-size: 1rem;
+  text-align: start;
 }
 
 .close-btn {

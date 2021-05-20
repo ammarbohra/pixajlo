@@ -2,7 +2,6 @@
 	border-radius: 8px;
 	border: 2px solid var(--cl);
 	padding: 0 var(--spacer-sm);
-	overflow: visible;
 	h2 {
 		text-align: center;
 		padding: calc(var(--spacer-sm) / 2) 0;
@@ -13,7 +12,9 @@
 		position: absolute;
 		top: -30px;
 		right: -40px;
-		width: 200px;
+		width: 180px;
+		z-index: 9;
+		filter: drop-shadow(0px 16px 16px rgba(0, 0, 0, 0.5));
 	}
 	visibility: hidden;
 	opacity: 0;

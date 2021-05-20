@@ -1,8 +1,9 @@
 .wrapper {
 	width: 100%;
-	padding: var(--spacer-sm);
+	padding: var(--spacer-md) var(--spacer-sm);
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
 
 	@include mq("sm") {
 		max-width: 768px;

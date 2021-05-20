@@ -2,6 +2,9 @@
 	border-radius: 8px;
 	border: 2px solid var(--cl);
 	padding: var(--spacer-md);
+	&.-no-p {
+		padding: 0;
+	}
 	&.-sm {
 		padding: var(--spacer-sm);
 	}

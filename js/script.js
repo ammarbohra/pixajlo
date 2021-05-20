@@ -12,6 +12,10 @@ closeBtn.addEventListener('click', function() {
 const modalBtns = document.querySelectorAll('[modal]');
 modalBtns.forEach(function(modalBtn) {
   modalBtn.addEventListener('click', function() {
+    gsap.to(reviews, {autoAlpha: 1})
+    gsap.to(".reviews-card", {autoAlpha: 0})
+    gsap.to(gridItems[7], {autoAlpha: 1})
+
     let modalClasses = modalBtn.getAttribute('modal').split(" ");
     let modals = [];
     modalClasses.forEach(function(modalClass) {
@@ -24,4 +28,17 @@ modalBtns.forEach(function(modalBtn) {
     }
   });
 });
+
+const reviews = document.querySelector('.reviews');
+reviews.addEventListener('click', function() {
+  gsap.to(reviews, {autoAlpha: 0})
+  gsap.to(".reviews-card", {autoAlpha: 1})
+  gsap.to(gridItems[7], {autoAlpha: 0})
+})
+const closeReviews = document.querySelector('.reviews-close');
+closeReviews.addEventListener('click', function() {
+  gsap.to(reviews, {autoAlpha: 1})
+  gsap.to(".reviews-card", {autoAlpha: 0})
+  gsap.to(gridItems[7], {autoAlpha: 1})
+})
 

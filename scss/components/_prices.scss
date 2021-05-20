@@ -1,12 +1,12 @@
 .prices {
-	--cl: #485b5d;
+	--cl: #5a9e94;
 	background: linear-gradient(90deg, #144e53 0%, transparent 75%);
 	@include flex($ai: center);
 	.icon {
 		margin-right: 1rem;
 	}
 	.img {
-		bottom: 1rem;
+		bottom: -0.25rem;
 		right: -1rem;
 		height: 80%;
 	}

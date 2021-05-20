@@ -1,0 +1,22 @@
+.reviews {
+	--cl: #bccfc8;
+	background: linear-gradient(135deg, #556b64 0%, transparent 60%);
+	@include flex-center(column);
+	h3 {
+		margin: var(--spacer-md) 0;
+	}
+	cursor: pointer;
+	&-card {
+		--cl: #bccfc8;
+		background: linear-gradient(-45deg, #556b64 0%, transparent 50%);
+		visibility: hidden;
+		opacity: 0;
+
+		@include flex(column, $ai: center);
+	}
+	&-close {
+		margin-top: auto;
+		cursor: pointer;
+		padding: 1rem;
+	}
+}
